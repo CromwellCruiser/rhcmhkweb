@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, nofollow">
+<title>The Right Honourable Company of Merchants</title>
+<meta name="description" content="The Merchant's Tie: woven 100% silk in navy blue with red Chinese junks and gold British tea clippers. Every tie admits its wearer as an Honourable Member of the Company.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital@0;1&family=Pinyon+Script&family=Noto+Serif+TC:wght@900&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.cert2{margin:0;position:relative;container-type:inline-size;box-shadow:0 1px 2px rgba(0,0,0,.08),0 12px 32px rgba(0,0,0,.14);background:#fff}
+.cert2 img{display:block;width:100%;height:auto}
+.cert2 .nm{position:absolute;left:8%;right:8%;top:var(--name-y,59.7%);transform:translateY(-50%);text-align:center;font-family:"Pinyon Script",cursive;font-size:var(--fs,5.4cqw);line-height:1;color:#1b1b1b;white-space:nowrap;overflow:hidden}
+.cname{display:block;margin:1.4em 0 .4em}
+.cname span{display:block;font-style:italic;margin-bottom:.45em}
+.cname input{width:100%;max-width:24rem;font:inherit;font-size:1.05rem;padding:.6em .75em;border:1px solid currentColor;border-radius:0;background:#fff;color:inherit}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <img src="assets/insignia.webp" alt="" width="160" height="147">
+    <a class="title" href="/">The Right Honourable Company of Merchants<br>of Hong Kong Trading in Britain</a>
+    <span class="rule" aria-hidden="true"></span>
+    <button class="basket" id="openBasket" type="button">Basket (<span id="count">0</span>)</button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="product">
+      <div class="shot"><div class="art" data-art="tie"></div></div>
+      <form class="buy" id="tieForm" novalidate>
+        <span class="eyebrow">The Company Tie</span>
+        <h1>The Merchant&rsquo;s Tie</h1>
+        <div class="lede">
+          <p>Woven 100% silk in navy blue. Its red Chinese junks and gold British tea clippers symbolise the China trade.</p>
+          <p>Every tie makes its wearer an Honourable Member of the Company, styled <i>The Honourable [Name], MRHC</i>.</p>
+        </div>
+        <span class="price" id="tieTotal">£40.00</span>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" id="optNum">Choose your membership number<span class="p">+£15</span></label>
+          <div class="numbox" id="numBox" hidden>
+            <input type="number" id="num" min="100" max="1000000" inputmode="numeric" value="1888" aria-label="Membership number">
+            <span class="hint">Any free number from 100 to 1,000,000.</span>
+            <span class="err" id="numErr" hidden>Enter a whole number from 100 to 1,000,000.</span>
+          </div>
+          <label class="opt"><input type="checkbox" id="optCert">Paper certificate, posted<span class="p">+£30</span></label>
+        </div>
+        <div class="row">
+          <div class="qty" role="group" aria-label="Quantity">
+            <button type="button" id="qtyDown" aria-label="One fewer">−</button>
+            <output id="qty" aria-live="polite">1</output>
+            <button type="button" id="qtyUp" aria-label="One more">+</button>
+          </div>
+          <button class="btn" type="submit">Add to basket</button>
+        </div>
+        <span class="hint" id="qtyHint" hidden>A chosen number belongs to one tie.</span>
+      </form>
+    </section>
+
+    <section class="member">
+      <div class="txt">
+        <h2>Membership comes in the box</h2>
+        <p class="styled">The Honourable [Name], MRHC</p>
+        <p>Each tie carries a card with a code. Whoever wears it registers their own name, and is entered on the Company's Register with a number for life. No subscription.</p>
+        <label class="cname"><span>See what the certificate would look like with your name on it.</span>
+          <input id="certName" type="text" maxlength="40" placeholder="Your name" autocomplete="name"></label>
+        <p class="small">"The Honourable" and MRHC are courtesy styles of the Company. They are not an official title and confer no legal rank.</p>
+      </div>
+      <figure class="cert2" aria-label="Membership certificate preview">
+        <img src="https://raw.githubusercontent.com/CromwellCruiser/rhcmhkweb/main/certificate.webp" alt="The Company's bilingual membership certificate for an Honourable Member" width="1241" height="1754" loading="lazy">
+        <span class="nm" id="certOut" aria-live="polite">Your Name</span>
+      </figure>
+      <span id="cNum" hidden>001888</span>
+    </section>
+
+    <section class="also">
+      <h2>Also from the Company</h2>
+      <div class="items">
+        <article class="item">
+          <div class="pic"><div class="art" data-art="square"></div></div>
+          <div class="info">
+            <h3>The Ensign Pocket Square</h3>
+            <div class="buyline"><span>£25</span><button class="add" type="button" data-add="square">Add to basket</button></div>
+          </div>
+        </article>
+        <article class="item">
+          <div class="pic"><div class="art" data-art="pin"></div></div>
+          <div class="info">
+            <h3>The Company Pin</h3>
+            <div class="buyline"><span>£12</span><button class="add" type="button" data-add="pin">Add to basket</button></div>
+          </div>
+        </article>
+        <article class="item">
+          <div class="pic"><div class="art" data-art="cufflinks"></div></div>
+          <div class="info">
+            <h3>The Comprador&rsquo;s Cufflinks</h3>
+            <div class="buyline"><span>£40</span><button class="add" type="button" data-add="cufflinks">Add to basket</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="motto">
+      <img src="assets/insignia.webp" alt="" width="160" height="147">
+      <p class="la" lang="la">Ex Oriente Merces</p>
+      <p class="zh" lang="zh-Hant">通商惠工</p>
+    </div>
+    <p>The Right Honourable Company of Merchants of Hong Kong Trading in Britain Limited. Registered in England and Wales, company no. [to add].</p>
+    <p>Returns accepted within 14 days, except printed certificates. Prices and specifications are placeholders until samples are approved.</p>
+  </div>
+</footer>
+
+<span class="badge">TEST SITE</span>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Basket">
+  <header><h2>Basket</h2><button class="x" id="closeBasket" type="button" aria-label="Close basket">×</button></header>
+  <div class="lines" id="lines"></div>
+  <div class="f">
+    <div class="tot"><span>Total</span><b id="bTotal">£0.00</b></div>
+    <button class="btn" id="checkout" type="button">Checkout</button>
+    <p class="note" id="checkoutMsg" hidden>Payment is not connected on this test site.</p>
+  </div>
+</aside>
+<script src="site.js"></script>
+<script>
+(function(){
+  var i=document.getElementById("certName"), o=document.getElementById("certOut");
+  if(!i||!o) return;
+  function upd(){
+    var v=i.value.replace(/\s+/g," ").trim()||"Your Name";
+    o.textContent=v;
+    o.style.setProperty("--fs", Math.min(5.4, 5.4*30/Math.max(v.length,1)).toFixed(2)+"cqw");
+  }
+  i.addEventListener("input",upd); upd();
+})();
+</script>
+</body>
+</html>
