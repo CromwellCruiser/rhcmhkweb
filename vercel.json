@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/shop", "destination": "/", "permanent": false },
+    { "source": "/membership", "destination": "/", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}
