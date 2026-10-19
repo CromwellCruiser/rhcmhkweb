@@ -15,7 +15,7 @@
 <style>
 .cert2{margin:0;position:relative;container-type:inline-size;box-shadow:0 1px 2px rgba(0,0,0,.08),0 12px 32px rgba(0,0,0,.14);background:#fff}
 .cert2 img{display:block;width:100%;height:auto}
-.cert2 .nm{position:absolute;left:8%;right:8%;top:var(--name-y,59.7%);transform:translateY(-50%);text-align:center;font-family:"Pinyon Script",cursive;font-size:var(--fs,5.4cqw);line-height:1;color:#1b1b1b;white-space:nowrap;overflow:hidden}
+.cert2 .nm{position:absolute;left:8%;right:8%;top:var(--name-y,55.8%);transform:translateY(-50%);text-align:center;font-family:"Pinyon Script",cursive;font-size:var(--fs,3.85cqw);line-height:1;color:#1b1b1b;white-space:nowrap;overflow:hidden}
 .cname{display:block;margin:1.4em 0 .4em}
 .cname span{display:block;font-style:italic;margin-bottom:.45em}
 .cname input{width:100%;max-width:24rem;font:inherit;font-size:1.05rem;padding:.6em .75em;border:1px solid currentColor;border-radius:0;background:#fff;color:inherit}
@@ -141,7 +141,7 @@
   function upd(){
     var v=i.value.replace(/\s+/g," ").trim()||"Your Name";
     o.textContent=v;
-    o.style.setProperty("--fs", Math.min(5.4, 5.4*30/Math.max(v.length,1)).toFixed(2)+"cqw");
+    o.style.setProperty("--fs", Math.min(3.85, 3.85*21/Math.max(v.length,1)).toFixed(2)+"cqw");
   }
   i.addEventListener("input",upd); upd();
 })();
